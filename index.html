@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Erin Glen Real Estate</title>
   <style>
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.contact-photo img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
     :root{
       --bg:#f8f7f4;
       --white:#ffffff;
@@ -300,7 +318,7 @@
       </div>
 
       <div class="hero-visual">
-        <img src="harley.jpg" alt="Erin Glen">
+        <img src="erin.png" alt="Erin Glen">
       </div>
     </div>
   </section>
@@ -362,22 +380,30 @@
       <h2>Let’s connect.</h2>
     </div>
 
-    <div class="card">
-      <div class="contact-list">
-        <div>
-          <div class="meta">Phone</div>
-          <div>519-668-5012</div>
-        </div>
-        <div>
-          <div class="meta">Email</div>
-          <div>erin@eringlenre.ca</div>
-        </div>
-        <div>
-          <div class="meta">Service Area</div>
-          <div>London and surrounding communities</div>
-        </div>
+    <div class="contact-grid">
+
+  <div class="card">
+    <div class="contact-list">
+      <div>
+        <div class="meta">Phone</div>
+        <div>519-668-5012</div>
+      </div>
+      <div>
+        <div class="meta">Email</div>
+        <div>erin@eringlenre.ca</div>
+      </div>
+      <div>
+        <div class="meta">Service Area</div>
+        <div>London and surrounding communities</div>
       </div>
     </div>
+  </div>
+
+  <div class="contact-photo">
+    <img src="harley.jpg" alt="Erin Glen">
+  </div>
+
+</div>
   </section>
 </main>
 
