@@ -5,411 +5,438 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Erin Glen Real Estate</title>
   <style>
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.contact-photo img {
-  width: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
-@media (max-width: 800px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-    :root{
-      --bg:#f8f7f4;
-      --white:#ffffff;
-      --text:#151515;
-      --muted:#5f5f5f;
-      --line:#e8e4dc;
-      --gold:#b08d57;
-      --dark:#1c1c1c;
+    :root {
+      --bg: #f8f7f4;
+      --white: #ffffff;
+      --text: #151515;
+      --muted: #5f5f5f;
+      --line: #e8e4dc;
+      --gold: #b08d57;
+      --dark: #1c1c1c;
+      --panel: #efe9df;
     }
 
-    * { box-sizing: border-box; }
-
-    body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
+    * {
+      box-sizing: border-box;
     }
 
-    .container{
-      width:min(1120px, calc(100% - 40px));
-      margin:0 auto;
+    html {
+      scroll-behavior: smooth;
     }
 
-    header{
-      background:rgba(248,247,244,.92);
-      backdrop-filter:blur(8px);
-      border-bottom:1px solid var(--line);
-      position:sticky;
-      top:0;
-      z-index:10;
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:18px 0;
-      gap:20px;
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
+    header {
+      background: rgba(248, 247, 244, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
-    .brand img{
-      height:44px;
-      width:auto;
-      display:block;
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
     }
 
-    .brand-text{
-      font-size:1rem;
-      font-weight:600;
-      letter-spacing:.02em;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
     }
 
-    .nav-links{
-      display:flex;
-      gap:24px;
-      font-size:.95rem;
+    .brand img {
+      height: 44px;
+      width: auto;
+      display: block;
     }
 
-    .nav-links a{
-      color:var(--muted);
-      text-decoration:none;
+    .brand-text {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
     }
 
-    .hero{
-      padding:72px 0 56px;
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 0.95rem;
     }
 
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:54px;
-      align-items:center;
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
     }
 
-    .eyebrow{
-      text-transform:uppercase;
-      letter-spacing:.14em;
-      color:var(--gold);
-      font-size:.78rem;
-      font-weight:700;
-      margin-bottom:14px;
+    .hero {
+      padding: 72px 0 56px;
     }
 
-    h1{
-      font-size:clamp(2.6rem, 5vw, 4.8rem);
-      line-height:1.03;
-      letter-spacing:-.04em;
-      margin:0 0 20px;
-      max-width:700px;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 54px;
+      align-items: center;
     }
 
-    .subheadline{
-      font-size:1.1rem;
-      color:var(--muted);
-      line-height:1.6;
-      max-width:620px;
-      margin:0 0 28px;
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 14px;
     }
 
-    .hero-actions{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
+    h1 {
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+      margin: 0 0 20px;
+      max-width: 700px;
     }
 
-    .btn{
-      display:inline-block;
-      padding:14px 22px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:600;
-      font-size:.95rem;
-      transition:.2s ease;
+    .subheadline {
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 620px;
+      margin: 0 0 28px;
     }
 
-    .btn-dark{
-      background:var(--dark);
-      color:#fff;
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
-    .btn-light{
-      border:1px solid var(--line);
-      color:var(--text);
-      background:var(--white);
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: 0.2s ease;
     }
 
-    .btn:hover{
-      transform:translateY(-1px);
-      opacity:.95;
+    .btn-dark {
+      background: var(--dark);
+      color: #fff;
     }
 
-    .hero-visual{
-      background:linear-gradient(180deg, #f1eee8 0%, #eae4d8 100%);
-      border:1px solid var(--line);
-      border-radius:32px;
-      min-height:560px;
-      padding:28px;
-      display:flex;
-      align-items:flex-end;
-      justify-content:center;
-      overflow:hidden;
-      box-shadow:0 20px 50px rgba(0,0,0,.05);
+    .btn-light {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: var(--white);
     }
 
-    .hero-visual img{
-      max-width:100%;
-      max-height:520px;
-      object-fit:contain;
-      display:block;
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
     }
 
-    section{
-      padding:26px 0 64px;
+    .hero-visual {
+      background: linear-gradient(180deg, #f1eee8 0%, #eae4d8 100%);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      min-height: 560px;
+      padding: 28px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
     }
 
-    .section-head{
-      margin-bottom:22px;
+    .hero-visual img {
+      max-width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+      display: block;
     }
 
-    .section-label{
-      text-transform:uppercase;
-      letter-spacing:.14em;
-      color:var(--gold);
-      font-size:.78rem;
-      font-weight:700;
-      margin-bottom:10px;
+    section {
+      padding: 26px 0 64px;
     }
 
-    h2{
-      margin:0;
-      font-size:clamp(1.8rem, 3vw, 2.6rem);
-      letter-spacing:-.03em;
+    .section-head {
+      margin-bottom: 22px;
     }
 
-    .grid-2{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:22px;
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:22px;
+    h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      letter-spacing: -0.03em;
     }
 
-    .card{
-      background:var(--white);
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:28px;
-      box-shadow:0 10px 30px rgba(0,0,0,.03);
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
     }
 
-    .card p{
-      margin:0 0 16px;
-      color:var(--muted);
-      line-height:1.7;
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
-    .card p:last-child{
-      margin-bottom:0;
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     }
 
-    .service-title{
-      font-size:1.1rem;
-      font-weight:700;
-      margin-bottom:10px;
+    .card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.7;
     }
 
-    .contact-list{
-      display:grid;
-      gap:18px;
+    .card p:last-child {
+      margin-bottom: 0;
     }
 
-    .meta{
-      font-size:.8rem;
-      text-transform:uppercase;
-      letter-spacing:.12em;
-      color:var(--gold);
-      font-weight:700;
-      margin-bottom:5px;
+    .service-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
-    footer{
-      border-top:1px solid var(--line);
-      padding:24px 0 40px;
-      color:var(--muted);
-      font-size:.92rem;
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
     }
 
-    @media (max-width: 900px){
+    .contact-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .contact-photo {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
       .hero-grid,
       .grid-2,
-      .grid-3{
-        grid-template-columns:1fr;
+      .grid-3,
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
 
-      .nav-links{
-        display:none;
+      .nav-links {
+        display: none;
       }
 
-      .hero{
-        padding-top:46px;
+      .hero {
+        padding-top: 46px;
       }
 
-      .hero-visual{
-        min-height:420px;
+      .hero-visual {
+        min-height: 420px;
       }
 
-      .hero-visual img{
-        max-height:380px;
+      .hero-visual img {
+        max-height: 380px;
+      }
+
+      .contact-photo {
+        min-height: 320px;
+      }
+
+      .brand img {
+        height: 36px;
+      }
+
+      .brand-text {
+        white-space: normal;
       }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="brand">
-      <img src="cropped-PRESTIGE_Logo_Final-1-1.png" alt="Prestige Realty logo">
-      <div class="brand-text">Erin Glen Real Estate</div>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="cropped-PRESTIGE_Logo_Final-1-1.png" alt="Prestige Realty logo" />
+        <div class="brand-text">Erin Glen Real Estate</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
-<main class="container">
-  <section class="hero">
-    <div class="hero-grid">
-      <div>
-        <div class="eyebrow">London & surrounding area</div>
-        <h1>Helping you find your next property.</h1>
-        <p class="subheadline">
-          A refined, client-first approach to buying and selling real estate in London and the surrounding area.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-dark" href="tel:5196685012">Call 519-668-5012</a>
-          <a class="btn btn-light" href="mailto:erin@eringlenre.ca">Email Erin</a>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">London & surrounding area</div>
+          <h1>Helping you find your next property.</h1>
+          <p class="subheadline">
+            A refined, client-first approach to buying and selling real estate in London and the surrounding area.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="tel:5196685012">Call 519-668-5012</a>
+            <a class="btn btn-light" href="mailto:erin@eringlenre.ca">Email Erin</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="erin.png" alt="Erin Glen" />
         </div>
       </div>
+    </section>
 
-      <div class="hero-visual">
-        <img src="erin.png" alt="Erin Glen">
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="section-head">
-      <div class="section-label">About</div>
-      <h2>Local knowledge. Personal service.</h2>
-    </div>
-
-    <div class="grid-2">
-      <div class="card">
-        <p>
-          I’m Erin, a real estate professional proudly serving London and the surrounding area. Having grown up here and continuing to live and work here, I bring local insight and a personal approach to every client relationship.
-        </p>
-        <p>
-          I believe real estate should feel clear, supported, and well guided from start to finish.
-        </p>
+    <section id="about">
+      <div class="section-head">
+        <div class="section-label">About</div>
+        <h2>Local knowledge. Personal service.</h2>
       </div>
 
-      <div class="card">
-        <p>
-          Whether you’re buying your first home, selling a property, or planning your next move, my goal is to make the process feel informed, straightforward, and stress-free.
-        </p>
-        <p>
-          My clients value honest advice, strong communication, and a calm approach during important decisions.
-        </p>
+      <div class="grid-2">
+        <div class="card">
+          <p>
+            I’m Erin, a real estate professional proudly serving London and the surrounding area. Having grown up here and continuing to live and work here, I bring local insight and a personal approach to every client relationship.
+          </p>
+          <p>
+            I believe real estate should feel clear, supported, and well guided from start to finish.
+          </p>
+        </div>
+
+        <div class="card">
+          <p>
+            Whether you’re buying your first home, selling a property, or planning your next move, my goal is to make the process feel informed, straightforward, and stress-free.
+          </p>
+          <p>
+            My clients value honest advice, strong communication, and a calm approach during important decisions.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="services">
-    <div class="section-head">
-      <div class="section-label">Services</div>
-      <h2>How I can help.</h2>
-    </div>
-
-    <div class="grid-3">
-      <div class="card">
-        <div class="service-title">Buying</div>
-        <p>Helping you find the right home with confidence and clarity.</p>
+    <section id="services">
+      <div class="section-head">
+        <div class="section-label">Services</div>
+        <h2>How I can help.</h2>
       </div>
 
-      <div class="card">
-        <div class="service-title">Selling</div>
-        <p>Thoughtful pricing, smart marketing, and local market guidance.</p>
+      <div class="grid-3">
+        <div class="card">
+          <div class="service-title">Buying</div>
+          <p>Helping you find the right home with confidence and clarity.</p>
+        </div>
+
+        <div class="card">
+          <div class="service-title">Selling</div>
+          <p>Thoughtful pricing, smart marketing, and local market guidance.</p>
+        </div>
+
+        <div class="card">
+          <div class="service-title">Next Moves</div>
+          <p>Support for families, downsizers, and clients planning what’s next.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <div class="section-label">Contact</div>
+        <h2>Let’s connect.</h2>
       </div>
 
-      <div class="card">
-        <div class="service-title">Next Moves</div>
-        <p>Support for families, downsizers, and clients planning what’s next.</p>
+      <div class="contact-grid">
+        <div class="card">
+          <div class="contact-list">
+            <div>
+              <div class="meta">Phone</div>
+              <div>519-668-5012</div>
+            </div>
+            <div>
+              <div class="meta">Email</div>
+              <div>erin@eringlenre.ca</div>
+            </div>
+            <div>
+              <div class="meta">Service Area</div>
+              <div>London and surrounding communities</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-photo">
+          <img src="harley.jpg" alt="Erin Glen with dog" />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section id="contact">
-    <div class="section-head">
-      <div class="section-label">Contact</div>
-      <h2>Let’s connect.</h2>
-    </div>
-
-    <div class="contact-grid">
-
-  <div class="card">
-    <div class="contact-list">
-      <div>
-        <div class="meta">Phone</div>
-        <div>519-668-5012</div>
-      </div>
-      <div>
-        <div class="meta">Email</div>
-        <div>erin@eringlenre.ca</div>
-      </div>
-      <div>
-        <div class="meta">Service Area</div>
-        <div>London and surrounding communities</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="contact-photo">
-    <img src="harley.jpg" alt="Erin Glen">
-  </div>
-
-</div>
-  </section>
-</main>
-
-<footer>
-  <div class="container">© 2026 Erin Glen Real Estate</div>
-</footer>
+  <footer>
+    <div class="container">© 2026 Erin Glen Real Estate</div>
+  </footer>
 
 </body>
 </html>
