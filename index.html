@@ -9,82 +9,115 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #f7f7f6;
+  background: #ffffff;
   color: #111;
 }
 
+/* Layout */
 .container {
   max-width: 1100px;
   margin: auto;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
+/* Header */
 header {
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.logo {
+  font-weight: 600;
+  font-size: 18px;
 }
 
+/* Hero */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  padding: 60px 0;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 0;
 }
 
-h1 {
-  font-size: 42px;
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.2;
   margin-bottom: 20px;
 }
 
-h2 {
-  margin-bottom: 15px;
-}
-
-p {
+.hero p {
+  font-size: 18px;
   color: #555;
-  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
+/* Button */
 .button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 18px;
-  border-radius: 25px;
   background: #111;
-  color: white;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 30px;
   text-decoration: none;
+  font-size: 14px;
 }
 
+/* Image */
+.hero img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Sections */
 .section {
   padding: 60px 0;
 }
 
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  border: 1px solid #e6e6e6;
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
+.card {
+  background: #f7f7f7;
+  padding: 30px;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+/* Services */
 .services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-img {
-  width: 100%;
-  border-radius: 20px;
+.service {
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 12px;
+  font-weight: 500;
 }
 
+/* Contact */
+.contact {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Mobile */
 @media (max-width: 800px) {
-  .hero, .services {
+  .hero {
     grid-template-columns: 1fr;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
   }
 }
 </style>
@@ -93,67 +126,57 @@ img {
 <body>
 
 <header>
-  <div class="container nav">
-    <strong>Erin Glen Real Estate</strong>
+  <div class="container">
+    <div class="logo">Erin Glen Real Estate</div>
   </div>
 </header>
 
 <div class="container">
 
+  <!-- HERO -->
   <section class="hero">
     <div>
       <h1>Helping London families move with confidence.</h1>
       <p>
-        Born and raised in London, I help buyers and sellers navigate real estate with clarity,
-        honesty, and a deep understanding of the local market.
+        Born and raised in London, I help buyers and sellers navigate real estate 
+        with clarity, honesty, and a deep understanding of the local market.
       </p>
       <a class="button" href="tel:5196685012">Call 519-668-5012</a>
     </div>
 
     <div>
-      <!-- CHANGE THIS AFTER YOU UPLOAD YOUR PHOTO -->
       <img src="erin.png" alt="Erin Glen">
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section class="section">
     <h2>About</h2>
     <div class="card">
-      <p>
-        I’m Erin, a real estate professional proudly serving London and the surrounding area.
-        Having grown up here, I bring local insight and a personal approach to every client I work with.
-      </p>
-      <p>
-        Whether you’re buying, selling, or planning your next move, my goal is to make the process
-        feel simple, informed, and stress-free.
-      </p>
+      I’m Erin, a real estate professional proudly serving London and the surrounding area.
+      Having grown up here, I bring local insight and a personal approach to every client I work with.
+      <br><br>
+      Whether you’re buying, selling, or planning your next move, my goal is to make the process feel simple,
+      informed, and stress-free.
     </div>
   </section>
 
+  <!-- SERVICES -->
   <section class="section">
     <h2>Services</h2>
     <div class="services">
-      <div class="card">
-        <strong>Buying</strong>
-        <p>Helping you find the right home with confidence.</p>
-      </div>
-      <div class="card">
-        <strong>Selling</strong>
-        <p>Strategic pricing and marketing to get results.</p>
-      </div>
-      <div class="card">
-        <strong>Local Guidance</strong>
-        <p>Advice backed by real knowledge of London.</p>
-      </div>
+      <div class="service">Buying a Home</div>
+      <div class="service">Selling Your Home</div>
+      <div class="service">Investment Guidance</div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="section">
     <h2>Contact</h2>
-    <div class="card">
-      <p><strong>Phone:</strong> 519-668-5012</p>
-      <p><strong>Email:</strong> erin@eringlenre.ca</p>
-      <p><strong>Location:</strong> London, Ontario</p>
+    <div class="contact">
+      Phone: 519-668-5012<br>
+      Email: erin@eringlenre.ca
     </div>
   </section>
 
